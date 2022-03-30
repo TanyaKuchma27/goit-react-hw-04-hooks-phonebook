@@ -1,16 +1,18 @@
-.field {
+import styled from '@emotion/styled';
+
+export const Field = styled.label`
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
-}
+`;
 
-.text {
+export const Text = styled.span`
   margin-bottom: 4px;
   font-size: 20px;
   color: #212121;
-}
+`;
 
-.input {
+export const Input = styled.input`
   margin-top: 4px;
   width: 250px;
   height: 30px;
@@ -21,8 +23,8 @@
   border-radius: 4px;
   outline: none;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.input:focus-within {
-  border: 1px solid rgb(88, 11, 34);
-}
+  :focus-within {
+    border: 1px solid rgb(88, 11, 34);
+  }
+`;

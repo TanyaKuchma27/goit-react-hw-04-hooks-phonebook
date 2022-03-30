@@ -1,4 +1,6 @@
-.form {
+import styled from '@emotion/styled';
+
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
   max-width: 350px;
@@ -6,22 +8,22 @@
   border-radius: 10px;
   padding: 20px;
   background-color: #e2b3b3;
-}
+`;
 
-.field {
+export const Field = styled.label`
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
-}
+`;
 
-.text {
+export const Text = styled.span`
   margin-bottom: 4px;
   font-size: 24px;
   font-weight: 700;
   color: rgb(88, 11, 34);
-}
+`;
 
-.input {
+export const Input = styled.input`
   margin-top: 4px;
   height: 30px;
   padding-left: 10px;
@@ -31,13 +33,13 @@
   border-radius: 4px;
   outline: none;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.input:focus-within {
+  :focus-within {
   border: 1px solid rgb(88, 11, 34);
-}
+  }
+`;
 
-.btn {
+export const Button = styled.button`
   margin: 0 auto;
   max-width: 300px;
   padding-left: 30px;
@@ -55,9 +57,9 @@
   letter-spacing: 0.06em;
   color: #ffffff;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.btn:hover,
-.btn:focus {
+  :hover,
+  :focus {
   background-color: rgb(51, 4, 31);
-}
+  }
+`;

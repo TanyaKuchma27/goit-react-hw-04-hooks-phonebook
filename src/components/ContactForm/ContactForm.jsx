@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import s from './ContactForm.module.css';
+import {Form, Field, Text, Input, Button} from './ContactForm.styled';
 
 class ContactForm extends Component { 
     state = {
@@ -24,35 +24,33 @@ class ContactForm extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit} className={s.form}>
-                <label className={s.field}>
-                    <span className={ s.text}>Name</span>
-                    <input
+            <Form onSubmit={this.handleSubmit}>
+                <Field>
+                    <Text>Name</Text>
+                    <Input
                     type="text"
                     name="name"
                     value={this.state.name}
-                    onChange={this.handleChange}
-                    className={s.input}
+                    onChange={this.handleChange}                    
                     pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
                     title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                     required
                     />
-                </label>
-                <label className={s.field}>
-                    <span className={ s.text}>Number</span>
-                    <input
+                </Field>
+                <Field>
+                    <Text>Number</Text>
+                    <Input
                     type="tel"
                     name="number"
                     value={this.state.number}
-                    onChange={this.handleChange}
-                    className={s.input}
+                    onChange={this.handleChange}                    
                     pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
                     title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                     required
                     />
-                </label>
-                <button type="submit" className={s.btn}>Add contact</button>
-            </form>
+                </Field>
+                <Button type="submit">Add contact</Button>
+            </Form>
         )
     }
 }

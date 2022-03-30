@@ -1,20 +1,20 @@
 import ContactItem from 'components/ContactItem';
 import PropTypes from 'prop-types';
-import s from './ContactList.module.css';
+import {List, Item} from './ContactList.styled';
 
 const ContactList = ({ visibleContacts, onDeleteContact }) => {
     return (
-        <ul className={s.list}>
+        <List>
             {visibleContacts.map(({ id, name, number }) => (
-                <li key={id} className={s.item}>
+                <Item key={id}>
                     <ContactItem
                         name={name}
                         number={number}
                         onDeleteContact={() => onDeleteContact(id)}
                     />                    
-                </li>
+                </Item>
             ))}
-        </ul>);
+        </List>);
 };
 
 ContactList.propTypes = {
