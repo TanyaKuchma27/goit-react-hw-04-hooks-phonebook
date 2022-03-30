@@ -1,0 +1,9 @@
+.list {
+  padding-left: 25px;
+}
+
+.item {
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: #252525;
+}
